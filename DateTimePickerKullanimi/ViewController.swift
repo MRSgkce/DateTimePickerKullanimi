@@ -25,6 +25,13 @@ class ViewController: UIViewController {
         timePicker=UIDatePicker()
         timePicker.datePickerMode = .time
         saat.inputView=timePicker
+        
+        let dokundu = UITapGestureRecognizer(target: self, action: #selector(dokunmaAlgilamaMetod))
+        view.addGestureRecognizer(dokundu)
+    }
+    //boş ekrana dokununca datrih ve saatin kapanması
+    @objc func dokunmaAlgilamaMetod(){
+        print("ekrana dokunuldu.")
     }
 
 
